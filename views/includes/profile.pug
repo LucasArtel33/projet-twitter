@@ -1,0 +1,26 @@
+script(src="/javascripts/profile.js")
+div(class="card profile-container mr-4 bg-white d-flex flex-column")
+  form(id="form-profile" class="d-flex flex-row justify-content-center align-items-center mt-2" action="/users/update/img" method="post" enctype="multipart/form-data")
+    input(type="file" name="avatar" class="d-none" id="input-img-profile")
+    img(src=user.avatar class="img-fluid img-profile" id="img-profile")
+  div(class="d-flex flex-row justify-content-center align-items-center")
+    p(class="text-primary")= user.username
+  if currentUser._id.toString() !== user._id.toString()
+    div(class='d-flex flex-row justify-content-center align-items-center mb-3')
+      if currentUser.following.map( objId => objId.toString()).includes(user._id.toString())
+        a(class="btn btn-outline-danger text-danger" href="/users/unfollow/" + user._id) Se désabonner
+      else
+        a(class="btn btn-outline-primary text-primary" href="/users/follow/" + user._id) S'abonner
+  div(class="d-flex flex-row justify-content-center align-items-center text-center")
+    div(class="flex-fill")
+      p
+        strong Tweets postés :
+        br
+        span(class="text-primary")=  tweets && tweets.filter( t => t.author._id.toString() === user._id.toString()).length
+    div(class="flex-fill")
+      p
+        strong Personne suivies :
+        br
+        span(class="text-primary")= user.following.length
+
+

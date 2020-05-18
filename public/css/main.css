@@ -1,0 +1,88 @@
+.content {
+  max-width: 1000px ;
+  margin-top: 20px;
+}
+
+.search-icons{
+  color:#495057;
+}
+
+.profile-container {
+  width: 30%;
+  max-width: 300px;
+  height: fit-content;
+  color: #657786;
+}
+
+.pointer-cursor{
+  cursor: pointer;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.img-profile{
+  max-height: 150px;
+  border:1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+
+.img-profile-tweet{
+  max-height: 40px;
+  border:1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+
+.img-profile-search{
+  max-height: 30px;
+  border:1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+
+.btn-tweet {
+  border-radius: 30px;
+}
+
+.tweet-element {
+  margin-bottom: 10px;
+}
+
+.b {
+  border: 1px solid red;
+}
+
+.b1 {
+  border: 1px solid green;
+}
+
+#search-menu-container {
+  position: relative;
+}
+
+.search-menu {
+  position: absolute;
+  z-index: 1;
+  background: white;
+  top: 25px;
+  left: -200px; 
+  width: 200px;
+  min-height: 200px;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67,0.5), 0 1px 3px 1px rgba(60, 64, 67, .35);
+}
+
+.search-menu-item {
+  border-bottom: 1px solid #eee;
+  padding:10px 0;
+  transition: background 0.4s;
+}
+
+.search-menu-item:hover {
+  background: #eee;
+  transition: background 0.4s;
+}
